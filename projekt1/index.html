@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attes Frontend sida</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="./script.js" defer></script>
+</head>
+
+<body>
+    <!-- Max 800px bred container-->
+    <div id="container">
+        <!-- Logo och meny i headern -->
+        <header>
+            <img src="../media/logo.svg" alt="Website logo" />
+            <div id="logo">AttApp</div>
+
+            <nav>
+                <ul>
+                    <li><a href="../home/">Home</a></li>
+                    <li><a href="../projekt1/">Projekt 1</a></li>
+                    <li><a href="../projekt2/">Projekt 2</a></li>
+                    <li><a href="../rapport/">Rapport</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section id="hacked">
+            <article>
+                <p id="hackedP"></p>
+            </article>
+        </section>
+
+        <!-- Sektionen omringar artiklar (eg. blogposts)-->
+        <section>
+            <!-- Artiklar placerar sig snyggt nedanför varann-->
+            <article>
+                <h2 id="headText">LÅNEFORMULÄR</h2>
+                <p>
+                    <form name="form">
+                        Personuppgifter<br>
+                        Förnamn: <input type="text" id="firstName"><br>
+                        Efternamn: <input type="text" id="lastName"><br><br>
+                        Hur stort lån ansöker du om?<br>
+                        Lånets mängd: <input type="text" id="amount"><br><br>
+                        Lånetiden och årliga rentan, fungerar som en kalkylatorn på samma.<br>
+                        Lånetid (år): <input type="number" value="1" id="payLength"><br>
+                        Årlig renta (%): <input type="text" id="rent"><br>
+
+                    </form>
+                </p>
+
+
+                <h2 id="submitted">Ansökan skickades!<br> Här är en kopia av ansökan :)</h2>
+                <p id="formP"></p>
+                <p id="total">Totalbelopp: 0€<br>Månadsbelopp: 0€</p>
+                <button type="button" id="calc">Räkna belopp</button>
+                <button type="button" id="submit">Skicka</button>
+                <p id="errorFirstName">Använd stor bokstav i förnamnet!</p>
+                <p id="errorLastName">Använd stor bokstav i efternamnet!</p>
+                <p id="errorAmount">Ange lånets mängd korrekt med endast numror!</p>
+                <p id="errorPayLength">Ange lånetiden korrekt!</p>
+                <p id="errorRent">Ange rentan korrekt! (0.01 - 100)</p>
+                <p id="errorOther">Formuläret är inte fyllt i korrekt!</p>
+                <p id="play">Vi kontaktar dig inom några dagar, tack att du valde att ansöka lån från
+                    AttePankki!</p>
+                <div id="spel">
+                    <br><br>
+                    <h2>Spela Sten Papper Sax medan du väntar på beslutet!</h2>
+                    <button type="button" id="playGame">Starta spelet!</button>
+                    <button type="button" id="endGame">Sluta spelet :c</button><br>
+                    <div id="spelArea">
+                        <div id="spelInside">
+                        <p id="startText">Kan du vinna alla 5 motståndare?</p>
+                        <p id="opponentName"><br>
+                           <p id="gameButtons">
+                           <button type="button" id="rock">Sten</button>
+                            <button type="button" id="paper">Papper</button>
+                            <button type="button" id="scissor">Sax</button>
+                        </p>
+                        </div>
+                    </div>
+                </div>
+
+
+            </article>
+
+            <article>
+                <br><br><br><br>
+                <h2>REFERENSNUMMERGENERATOR</h2>
+                <p>
+                    <form name="referenceNumberGen">
+                        3 - 19 långt nummer, första nummret kan inte vara 0.
+                        <br><br><input type="text" id="numberInput">
+                    </form>
+                    <br><button type="button" id="generateButton">Generera</button>
+                    <p id="generatedNumber"></p>
+
+                    <br><br><br>
+                    <h2>DATUMHANTERING</h2>
+                    <form name="dateCalc">
+                        Flyttar betalningsdagen till nästa vardag om dagen är en lördag eller
+                        söndag<br><br>Dagar att betala: <input type="number" id="amountDays">
+                        <button type="button" id="countT">Räkna</button>
+                        <p id="dateResult"></p>
+                    </form>
+                </p>
+            </article>
+
+
+
+            <article>
+                <br><br>
+                <h2>STOPWATCH</h2>
+                <p>Byt start tiden H:M:S<br>
+                    <form name="stopwatchForm">
+                        <input type="number" value="0" id="hour" min="0" max="500"> :
+                        <input type="number" value="0" id="min" min="0" max="59"> :
+                        <input type="number" value="0" id="sec" min="0" max="59">
+                    </form><br>
+                </p>
+                <p id="timer">0:0:0</p><br>
+                <button type="button" id="startStopwatch">Starta klockan</button>
+                <button type="button" id="resetStopwatch">Nolla klockan</button>
+                <button type="button" id="mellantid">Spara mellantid</button>
+                <br>
+                <p>
+                    Spara mellantiden med att HÖGERklicka på mellantidsknappen<br><br>Mellantiderna sparas i textfältet
+                </p>
+                <textarea id="mellantider"></textarea>
+                <br><br>
+            </article>
+
+            <!-- Stilistiskt element separerar artiklar-->
+            <div class="separator"></div>
+
+        </section>
+
+    </div>
+
+    <footer>
+        Made by Atte<sup>&#169;</sup>
+    </footer>
+</body>
+
+</html>

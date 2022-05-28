@@ -1,0 +1,3 @@
+<br><br>Exempel text.... Här är också en bild: 
+<br><br><img src="../media/cardBack.png" width="100px"></img>
+<br>Här är en länk till <a href="https://www.iltalehti.fi/">Iltalehti</a>

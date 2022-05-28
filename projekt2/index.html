@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attes Frontend sida</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="./jquery-3.6.0.min.js"></script>
+    <script src="./script.js" defer></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/data.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <!-- Max 800px bred container-->
+    <div id="container">
+        <!-- Logo och meny i headern -->
+        <header>
+            <img src="../media/logo.svg" alt="Website logo" />
+            <div id="logo">AttApp</div>
+
+            <nav>
+                <ul>
+                    <li><a href="../home/">Home</a></li>
+                    <li><a href="../projekt1/">Projekt 1</a></li>
+                    <li><a href="../projekt2/">Projekt 2</a></li>
+                    <li><a href="../rapport/">Rapport 1</a></li>
+                    <li><a href="../rapport2/">Rapport 2</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Sektionen omringar artiklar (eg. blogposts)-->
+        <section>
+            <!-- Artiklar placerar sig snyggt nedanför varann-->
+            <article id="memory">
+                <br>
+                <h2>Memory Spel - Uppg 1</h2>
+                <img class="card 3" src="../media/cardBack.png" width="150px" height="220" />
+                <img class="card 1" src="../media/cardBack.png" width="150px" height="220" />
+                <img class="card 2" src="../media/cardBack.png" width="150px" height="220" /><br>
+                <img class="card 2" src="../media/cardBack.png" width="150px" height="220" />
+                <img class="card 3" src="../media/cardBack.png" width="150px" height="220" />
+                <img class="card 1" src="../media/cardBack.png" width="150px" height="220" />
+            </article>
+
+            <div class="separator"></div>
+
+            <article>
+                <br>
+                <h2>Bildgalleri - Uppg 2</h2>
+                <img src="../media/bild.jpg" alt="en bild" id="galleri"><br>
+                <img src="../media/bild.jpg" alt="en annan bild" class="thumb">
+                <img src="../media/bild2.jpg" alt="en annan bild" class="thumb">
+                <img src="../media/bild3.jpg" alt="en annan bild" class="thumb">
+                <img src="../media/bild4.jpg" alt="en annan bild" class="thumb">
+            </article>
+
+            <div class="separator"></div>
+
+            <article>
+                <br>
+                <h2>Temamotor - Uppg 3</h2>
+                <span id="rgb">rgb(128 ,128 ,128)</span><br>
+                Röd: <input type="range" min="0" max="255" id="redSlider" value="128">
+                <span id="redAmount">Binary: 10000000 Octal: 200 Hex: 80</span><br>
+                Grön: <input type="range" min="0" max="255" id="greenSlider" value="128">
+                <span id="greenAmount">Binary: 10000000 Octal: 200 Hex: 80</span><br>
+                Blå: <input type="range" min="0" max="255" id="blueSlider" value="128">
+                <span id="blueAmount">Binary: 10000000 Octal: 200 Hex: 80</span><br>
+            </article>
+
+            <div class="separator"></div>
+
+            <article>
+                <br><br>
+                <h2>DOM manipulering - Uppg 4</h2>
+                <br>
+                <img src="../media/code.svg" alt="Code SVG" id="codeImg" width="100px" /><br><br><br>
+                <button id="buttonHide">Display/Hide</button>
+                <button id="buttonFade">FadeOut/FadeIn</button>
+                <button id="buttonSlide">Slide in/Slide Out</button>
+                <button id="buttonAnimation">Animation</button>
+            </article>
+
+            <div class="separator"></div>
+
+            <article>
+                <br>
+                <h2>Cookies - Uppg 5</h2>
+                <button id="login">Logga in</button>
+                <button id="logout">Logga ut</button>
+                <div id="loggedInText">
+                    <br>
+                    <span id="username"></span><br>
+                    <span id="firstVisit"></span><br>
+                    <span id="visits"></span><br>
+                </div>
+            </article>
+
+            <div class="separator"></div>
+
+            <article>
+                <h2>AJAX - Uppg 6</h2>
+                <button id="loadData">Ladda innehåll med AJAX</button>
+                <span id="ajax"></span><br><br>
+                <button id="loadDataJQ">Ladda innehåll med JQuery AJAX</button>
+                <span id="jq"></span>
+            </article>
+
+            <div class="separator"></div>
+
+            <article>
+                <h2>JSON - Uppg 7</h2>
+                <button id="loadJsonIp">Ladda data från IP-Api</button><br><br>
+                <span id="jsonIp"></span>
+                <button id="loadJsonWeather">Ladda väderdata (Helsingfors)</button><br><br>
+                <span id="jsonWeather"></span>
+            </article>
+
+            <div class="separator"></div>
+
+            <article>
+                <h2>Charts - Uppg 8</h2>
+                <div id="chart_div"></div>
+                <figure class="highcharts-figure">
+                    <div id="chartContainer"></div>
+
+                    <table id="datatable">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Atte</th>
+                                <th>Jonne</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>Watermelons</th>
+                                <td>8</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <th>Pears</th>
+                                <td>6</td>
+                                <td>9</td>
+                            </tr>
+                            <tr>
+                                <th>Apples</th>
+                                <td>5</td>
+                                <td>11</td>
+                            </tr>
+                            <tr>
+                                <th>Bananas</th>
+                                <td>5</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <th>Mandarine</th>
+                                <td>22</td>
+                                <td>41</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </figure>
+                <div id="myChartDiv">
+                    <canvas id="myChart"></canvas>
+                  </div>                  
+            </article>
+
+            <div class="separator"></div>
+
+            <footer>
+                Made by Atte<sup>&#169;</sup>
+            </footer>
+
+    </div>
+</body>
+
+</html>

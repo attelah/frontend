@@ -1,0 +1,246 @@
+/* Dennis snygga stilfil */
+
+/* Sidhuvudet logo, firmanamn och nav */
+header {
+    background-color: #1a66bc;
+    display: flex;
+    /* logon och nav är flex items */
+    align-items: center;
+}
+
+header img {
+    padding: 4px;
+    margin: 6px 6px;
+    border: 2px solid white;
+    border-radius: 8px;
+}
+
+#logo {
+    color: white;
+    padding-left: 16px;
+    font-size: xx-large;
+}
+
+/* Huvudmenyn */
+nav {
+    margin-left: auto;
+    /* skuffar menyn till högra kanten */
+}
+
+nav ul {
+    margin: 0px 20px;
+    /* bort med inbyggd marginal (shortand 2) */
+}
+
+nav li {
+    list-style: none;
+    /* bort med bollar */
+    float: left;
+    /* ordna element bredvid varann på desktop */
+    padding: 10px;
+    /* lite till luft runt li */
+}
+
+nav li>a {
+    text-decoration: none;
+    /* bort med underline */
+    color: white;
+    /* bort med inbyggd blå/lila text */
+}
+
+/* Allmängällande stilar */
+body {
+    background-color: #3D3D3D;
+    margin: 0;
+    font-family: "Helvetice Neue", Helvetica, sans-serif;
+}
+
+#container {
+    background-color: #fff;
+    color: #3D3D3D;
+    max-width: 800px;
+    margin: auto;
+    min-height: 100vh;
+}
+
+article {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#galleri {
+    width: 400px;
+    opacity:1;
+    transition:opacity 0.5s linear;
+}
+
+.thumb {
+    width: 80px;
+}
+
+.hiddenImg {
+    opacity: 0;
+    width: 400px;
+}
+
+#rapportHeader {
+    text-align: center;
+}
+
+#rapport {
+    padding: 50px;
+    text-align: left;
+}
+
+#timer {
+    font-size: 40px;
+}
+
+#hacked {
+    margin: -0.1px;
+    background-color: red;
+    padding: 1px;
+    display: none;
+}
+
+#errorFirstName,
+#errorLastName,
+#errorAmount,
+#errorPayLength,
+#errorRent,
+#errorOther {
+    color: red;
+    display: none;
+}
+
+#startStopwatch,
+#resetStopwatch,
+#mellantid {
+    padding: 10px;
+}
+
+#mellantider {
+    width: 400px;
+    height: 200px;
+}
+
+#submitted {
+    display: none;
+}
+
+#spelArea {
+    background-color: rgb(173, 173, 173);
+    margin: auto;
+    height: 250px;
+    padding: 10px;
+    width: 70%;
+    font-size: 22px;
+    display: none;
+}
+
+#rock,
+#paper,
+#scissor {
+    padding: 15px;
+    margin: 5px;
+}
+
+#endGame {
+    display: none;
+    margin: auto;
+    padding: 10px;
+}
+
+#play,
+#playGame {
+    display: none;
+    margin: auto;
+    padding: 10px;
+}
+
+#spel {
+    display: none;
+}
+
+
+.card {
+    padding: 2px;
+}
+
+#loggedInText {
+    display: none;
+}
+
+#codeImg {
+    position: relative;
+}
+
+#logout {
+    display: none;
+}
+
+
+/* Footer */
+footer {
+    background-color: rgb(45, 155, 219);
+    color: #fff;
+    position: center;
+    bottom: 0px;
+    width: 100%;
+    max-width: 790px;
+    padding: 5px;
+    margin: auto;
+    display: block;
+}
+
+#charContainer {
+    height: 200px;
+}
+
+.highcharts-figure,
+.highcharts-data-table table {
+    min-width: 310px;
+    max-width: 300px;
+    margin: 1em auto;
+}
+
+#datatable {
+    font-family: Verdana, sans-serif;
+    border-collapse: collapse;
+    border: 1px solid #ebebeb;
+    margin: 10px auto;
+    text-align: center;
+    width: 100%;
+    max-width: 300px;
+}
+
+#datatable caption {
+    padding: 1em 0;
+    font-size: 1.2em;
+    color: #555;
+}
+
+#datatable th {
+    font-weight: 600;
+    padding: 0.5em;
+}
+
+#datatable td,
+#datatable th,
+#datatable caption {
+    padding: 0.5em;
+}
+
+#datatable thead tr,
+#datatable tr:nth-child(even) {
+    background: #f8f8f8;
+}
+
+#datatable tr:hover {
+    background: #f1f7ff;
+}
+
+#myChartDiv {
+    width: 400px;
+    text-align: center;
+}
